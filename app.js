@@ -14,11 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
-                icon.setAttribute('data-lucide', 'x');
+                menuToggle.innerHTML = '<i data-lucide="x"></i>';
             } else {
-                icon.setAttribute('data-lucide', 'menu');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
             }
             lucide.createIcons();
         });
@@ -30,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                const icon = menuToggle.querySelector('i');
-                icon.setAttribute('data-lucide', 'menu');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
                 lucide.createIcons();
             }
         });

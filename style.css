@@ -290,7 +290,7 @@ img {
     display: none;
     background: none;
     border: none;
-    color: var(--white);
+    color: var(--text-primary);
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -1680,6 +1680,12 @@ img {
         overflow-x: auto;
         max-height: none;
         padding-bottom: 10px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .sidebar-menu::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
     }
     
     .tab-btn {
@@ -1706,6 +1712,26 @@ img {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
     .nav-links {
         display: none; /* Mobile menu toggled by JS */
         position: absolute;
@@ -1717,7 +1743,7 @@ img {
         flex-direction: column;
         padding: 30px 24px;
         gap: 20px;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     }
     
     .nav-links.active {
@@ -1729,7 +1755,7 @@ img {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .stats-grid {
@@ -1743,6 +1769,10 @@ img {
     
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .service-card, .why-card {
+        padding: 24px 20px;
     }
     
     .why-grid {
