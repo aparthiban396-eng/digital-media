@@ -1652,6 +1652,9 @@ img {
         border-radius: var(--border-radius-lg);
         overflow: hidden;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .dashboard-sidebar {
@@ -1660,6 +1663,10 @@ img {
         background: var(--bg-card-hover);
         border-right: none;
         border-bottom: 1px solid var(--border-color);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     
     .dashboard-cards-list {
@@ -1673,9 +1680,14 @@ img {
         padding: 24px 20px;
         box-shadow: none;
         position: static;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     
     .sidebar-menu {
+        display: flex;
         flex-direction: row;
         overflow-x: auto;
         max-height: none;
@@ -1683,6 +1695,9 @@ img {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         gap: 12px;
+        width: 100%;
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
     }
     
     .sidebar-menu::-webkit-scrollbar {
