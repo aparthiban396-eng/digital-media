@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Digital Marketing | Meta Ads Lead Generation Specialist</title>
+    <meta name="description" content="We help service-based businesses generate high-quality leads and build predictable lead generation systems through Meta Ads. Led by Durgadevi P.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="lucide.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css?v=1.1.2">
+
+    
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <img src="assets/logo.jpg" alt="Durga Logo" class="preloader-logo">
+                <div class="logo-spinner"></div>
+            </div>
+            <div class="preloader-brand">
+                <span class="preloader-brand-name">DURGA</span>
+                <span class="preloader-brand-sub">GROWTH MEDIA</span>
+            </div>
+            <div class="preloader-progress-bar">
+                <div class="preloader-progress" id="preloader-progress"></div>
+            </div>
+            <span class="preloader-percentage" id="preloader-percentage">0%</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-ring" id="custom-cursor-ring"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/logo.jpg" alt="Durga Digital Marketing Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">DURGA</span>
+                    <span class="brand-sub">DIGITAL MARKETING</span>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#stats" class="nav-link">Performance</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#why-choose-us" class="nav-link">Why Us</a></li>
+                <li><a href="#estimator" class="nav-link btn-nav-cta">Estimate ROI</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge"><i data-lucide="sparkles"></i> Meta Ads Lead Generation Specialist</span>
+                <h1 class="hero-title">
+                    We Build Predictable <br>
+                    <span class="text-gradient">Lead Gen Systems</span> <br>
+                    That Scale Businesses.
+                </h1>
+                <p class="hero-subtitle">
+                    I help service-based businesses generate highly-qualified leads and build automated client acquisition funnels through high-performance Meta Ads campaigns.
+                </p>
+                <div class="hero-actions">
+                    <a href="#estimator" class="btn btn-primary">
+                        Calculate Your ROI <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#case-studies" class="btn btn-secondary">
+                        View Client Results
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <span class="trust-item"><i data-lucide="check-circle-2"></i> Data-Driven Optimization</span>
+                    <span class="trust-item"><i data-lucide="check-circle-2"></i> Multi-Industry Expertise</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="logo-sphere">
+                    <img src="assets/logo.jpg" alt="Durga Logo Big" class="logo-floating">
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                </div>
+                <!-- Mini Stats Badge -->
+                <div class="mini-stats-card float-card-1">
+                    <div class="card-icon"><i data-lucide="trending-up"></i></div>
+                    <div>
+                        <div class="card-value">7,500+</div>
+                        <div class="card-label">Total Leads Generated</div>
+                    </div>
+                </div>
+                <div class="mini-stats-card float-card-2">
+                    <div class="card-icon"><i data-lucide="piggy-bank"></i></div>
+                    <div>
+                        <div class="card-value">₹41.98</div>
+                        <div class="card-label">Avg. Cost Per Lead</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="section-container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h2 class="stat-number" data-target="7500">0</h2>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">Qualified Leads Generated</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="stat-number" data-target="7">0</h2>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">Businesses Managed</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="stat-number" data-target="20000">0</h2>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">High-Intent Link Clicks</p>
+                </div>
+                <div class="stat-card">
+                    <h2 class="stat-number" data-target="100">0</h2>
+                    <span class="stat-plus">%</span>
+                    <p class="stat-label">Data-Driven Strategy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Core Capabilities</span>
+                <h2 class="section-title">Result-Oriented Marketing Services</h2>
+                <p class="section-subtitle">We design, implement, and manage end-to-end campaigns that turn social media traffic into real, paying customers.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Meta Ads -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="facebook"></i></div>
+                    <h3 class="service-title">Meta Ads (Facebook & Instagram)</h3>
+                    <p class="service-description">Precision audience targeting and conversion-optimized campaigns to get your brand directly in front of buyers.</p>
+                </div>
+                <!-- Lead Gen Campaigns -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="funnel"></i></div>
+                    <h3 class="service-title">Lead Generation Campaigns</h3>
+                    <p class="service-description">Building bespoke instant forms and landing page systems to capture qualified, high-intent inquiries.</p>
+                </div>
+                <!-- SMM -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="users"></i></div>
+                    <h3 class="service-title">Social Media Management</h3>
+                    <p class="service-description">Growing your brand's presence across platforms with high-quality content schedules and community engagement.</p>
+                </div>
+                <!-- LinkedIn -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="linkedin"></i></div>
+                    <h3 class="service-title">LinkedIn Marketing</h3>
+                    <p class="service-description">B2B client outreach and positioning strategies to attract high-ticket corporate clients and partnerships.</p>
+                </div>
+                <!-- GBP -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="map-pin"></i></div>
+                    <h3 class="service-title">Google Business Profile Management</h3>
+                    <p class="service-description">Local SEO optimization to rank your business at the top of local maps and drive direct calls and visits.</p>
+                </div>
+                <!-- Video Script Writing -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="pen-tool"></i></div>
+                    <h3 class="service-title">Video Script Writing</h3>
+                    <p class="service-description">Drafting highly engaging scripts designed to hook viewers in the first 3 seconds and convert them to leads.</p>
+                </div>
+                <!-- Video Shoot Planning -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="camera"></i></div>
+                    <h3 class="service-title">Video Shoot Planning</h3>
+                    <p class="service-description">Full creative direction, storyboard planning, and visual mapping for high-performing video ads.</p>
+                </div>
+                <!-- Video Editing -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="film"></i></div>
+                    <h3 class="service-title">High-Impact Video Editing</h3>
+                    <p class="service-description">Polishing Reels, TikToks, and ad creatives with modern transitions, subtitles, and conversion-focused pacing.</p>
+                </div>
+                <!-- Campaign Strategy -->
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
+                    <h3 class="service-title">Strategy & Optimization</h3>
+                    <p class="service-description">Continuous A/B testing, budget allocation, and lead funnel auditing to ensure maximum ROI for every rupee spent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Client Success Dashboard -->
+    <section class="case-studies-section" id="case-studies">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Proven Track Record</span>
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="section-subtitle">Explore live campaign performance data and results achieved across various service sectors.</p>
+            </div>
+            
+            <div class="dashboard-wrapper">
+                <!-- Case Studies Navigation Sidebar (Mobile Viewports Only) -->
+                <div class="dashboard-sidebar">
+                    <h3 class="sidebar-title">Select Client</h3>
+                    <div class="sidebar-menu" id="case-studies-tabs">
+                        <button class="tab-btn active" data-client="bridal">
+                            <span class="client-name">Bridal Makeup Studio</span>
+                            <span class="client-industry">Beauty & Bridal</span>
+                        </button>
+                        <button class="tab-btn" data-client="tesco-struct">
+                            <span class="client-name">Tesco Structures</span>
+                            <span class="client-industry">Roofing & PEB Construction</span>
+                        </button>
+                        <button class="tab-btn" data-client="tesco-dig">
+                            <span class="client-name">Tesco Digitals</span>
+                            <span class="client-industry">Web & IT Services</span>
+                        </button>
+                        <button class="tab-btn" data-client="seyon">
+                            <span class="client-name">Seyon Structures</span>
+                            <span class="client-industry">Roofing & Construction</span>
+                        </button>
+                        <button class="tab-btn" data-client="hushpurr">
+                            <span class="client-name">Hushpurr Beauty Parlour</span>
+                            <span class="client-industry">Beauty & Salon</span>
+                        </button>
+                        <button class="tab-btn" data-client="insurance">
+                            <span class="client-name">Insurance Company</span>
+                            <span class="client-industry">Insurance Recruitment</span>
+                        </button>
+                        <button class="tab-btn" data-client="ak-design">
+                            <span class="client-name">AK Design Consultant</span>
+                            <span class="client-industry">Design Consultancy</span>
+                        </button>
+                        <button class="tab-btn" data-client="waves">
+                            <span class="client-name">Waves Nature Sarees</span>
+                            <span class="client-industry">Fashion & Handloom</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Case Studies Cards List (Desktop Scroll Stack Only) -->
+                <div class="dashboard-cards-list">
+                    <div class="scroll-card active" data-client="bridal">
+                        <span class="card-badge">Beauty & Bridal</span>
+                        <h3>Bridal Makeup Studio</h3>
+                        <p class="card-summary">Meta Ads lead generation campaign yielding rapid, high-intent customer inquiries for a premium bridal studio.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">300+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">20 Days</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scroll-card" data-client="tesco-struct">
+                        <span class="card-badge">Roofing & PEB Construction</span>
+                        <h3>Tesco Structures</h3>
+                        <p class="card-summary">Annual SMM and Meta Lead Generation campaign driving consistent commercial construction contracts.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">3,500+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">1 Year</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="tesco-dig">
+                        <span class="card-badge">Website & IT Services</span>
+                        <h3>Tesco Digitals</h3>
+                        <p class="card-summary">Strategic Meta Form Ads targeting corporate decision-makers for web and IT service solutions.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">1,000+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">4 Months</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="seyon">
+                        <span class="card-badge">Roofing & Construction</span>
+                        <h3>Seyon Structures</h3>
+                        <p class="card-summary">Local brand optimization and direct lead capture campaigns for specialized construction projects.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">1,000+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">2+ Months</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="hushpurr">
+                        <span class="card-badge">Beauty & Salon</span>
+                        <h3>Hushpurr Beauty Parlour</h3>
+                        <p class="card-summary">High-volume sales and booking campaigns combined with influencer-style ad placement.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">1,000+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">2+ Months</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="insurance">
+                        <span class="card-badge">Insurance Recruitment</span>
+                        <h3>Insurance Company</h3>
+                        <p class="card-summary">Hiring lead ads targeting sales and recruitment candidates for a major regional agency branch.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">400+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">1 Month</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="ak-design">
+                        <span class="card-badge">Construction Design Consultancy</span>
+                        <h3>AK Design Consultant</h3>
+                        <p class="card-summary">Hyper-targeted Meta Ads generation campaigns designed for bespoke architectural consultancy.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">40+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">10 Days</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-card" data-client="waves">
+                        <span class="card-badge">Handloom Sarees</span>
+                        <h3>Waves Nature Sarees</h3>
+                        <p class="card-summary">Targeted conversion campaigns promoting premium handloom apparel to specialized demographics.</p>
+                        <div class="card-stats-row">
+                            <div class="card-stat-item">
+                                <span class="stat-value">350+</span>
+                                <span class="stat-lbl">Leads</span>
+                            </div>
+                            <div class="card-stat-item">
+                                <span class="stat-value">1 Month</span>
+                                <span class="stat-lbl">Duration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Viewport -->
+                <div class="dashboard-viewport">
+                    <div class="dashboard-header">
+                        <div class="client-info">
+                            <h3 class="active-client-name" id="active-client-name">Bridal Makeup Studio</h3>
+                            <p class="active-client-industry" id="active-client-industry">Beauty & Bridal</p>
+                        </div>
+                        <div class="campaign-tag">
+                            <i data-lucide="calendar"></i> <span id="active-campaign-duration">20 Days</span>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="dashboard-metrics-grid">
+                        <div class="metric-box highlight">
+                            <span class="metric-label">Total Leads Generated</span>
+                            <span class="metric-value" id="active-leads">300+</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Average Cost Per Lead (CPR)</span>
+                            <span class="metric-value" id="active-cpr">₹48.04</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Key Campaign Type</span>
+                            <span class="metric-value small-text" id="active-campaign-type">Meta Lead Generation Ads</span>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Chart Container -->
+                    <div class="dashboard-chart-container">
+                        <div class="chart-header">
+                            <h4>Lead Acquisition Velocity</h4>
+                            <span class="chart-subtitle">Daily Cumulative Lead Flow Performance</span>
+                        </div>
+                        <div class="chart-canvas-wrapper">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Services Provided Tags -->
+                    <div class="dashboard-services">
+                        <h4 class="services-title">Services Provided:</h4>
+                        <div class="services-tags-list" id="active-services-list">
+                            <span class="service-tag">Meta Ads</span>
+                            <span class="service-tag">Lead Generation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <div class="about-photo-wrapper">
+                        <div class="photo-decor"></div>
+                        <div class="about-photo">
+                            <img src="assets/founder.png" alt="Durgadevi P" class="about-photo-img">
+                        </div>
+                    </div>
+                    <div class="floating-badge">
+                        <i data-lucide="shield-check"></i>
+                        <span>Meta Certified Specialist</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">Behind The Brand</span>
+                    <h2 class="section-title">Meet Durgadevi P</h2>
+                    <h3 class="about-subtitle">Founder, Durga Growth Media & Digital Marketing Consultant</h3>
+                    <p class="about-text">
+                        Hi, I'm Durgadevi. I help service-based businesses generate high-quality leads through Meta Ads (Facebook & Instagram). 
+                    </p>
+                    <p class="about-text">
+                        My approach goes beyond running ads. I build integrated <strong>lead generation systems</strong> using precise audience targeting, compelling video creatives, campaign optimization, and detailed performance analysis to help businesses grow consistently month over month.
+                    </p>
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i data-lucide="target"></i></div>
+                            <div class="pillar-info">
+                                <h4>Laser Audience Targeting</h4>
+                                <p>Finding customers based on behavior, interests, and demographics.</p>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i data-lucide="message-square"></i></div>
+                            <div class="pillar-info">
+                                <h4>Hook-Driven Ad Creatives</h4>
+                                <p>Writing scripts and templates designed to capture immediate attention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section" id="why-choose-us">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Durga Growth Media?</span>
+                <h2 class="section-title">Engineered For Business Growth</h2>
+                <p class="section-subtitle">We don't focus on vanity metrics like 'impressions' and 'likes'. We focus on the metric that matters: high-intent customer leads.</p>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="pie-chart"></i></div>
+                    <h3>Lead Generation Focused Strategy</h3>
+                    <p>Every campaign is engineered to capture high-intent users directly interested in your services.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="sliders"></i></div>
+                    <h3>Data-Driven Campaign Optimization</h3>
+                    <p>We analyze cost-per-lead, click-through rates, and audience response to constantly lower your acquisition cost.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="compass"></i></div>
+                    <h3>Audience Research & Funnel Planning</h3>
+                    <p>Mapping out the entire path a customer takes—from seeing their first ad to booking a consultation with you.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="scroll"></i></div>
+                    <h3>Weekly & Monthly Performance Reports</h3>
+                    <p>Complete transparency. You will always know how much you spent, how many leads you got, and your exact CPL.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="lightbulb"></i></div>
+                    <h3>Creative Strategy Support</h3>
+                    <p>Providing custom video templates, hooks, and frameworks to make your ad creatives convert at double the rate.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i data-lucide="messages-square"></i></div>
+                    <h3>Transparent Communication</h3>
+                    <p>No agency fluff. Direct communication, honest advice, and dedicated collaboration with your business team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Budget Estimator & ROI Engine -->
+    <section class="estimator-section" id="estimator">
+        <div class="section-container">
+            <div class="estimator-grid">
+                <div class="estimator-card">
+                    <span class="section-badge">Interactive Estimator</span>
+                    <h2 class="estimator-title">Project Your Growth</h2>
+                    <p class="estimator-subtitle">Adjust the monthly ad spend slider below to see estimated leads and metrics based on our performance benchmarks.</p>
+                    
+                    <div class="slider-container">
+                        <label for="budget-slider" class="slider-label">
+                            <span>Monthly Ad Budget</span>
+                            <span class="budget-value" id="budget-value-display">₹15,000</span>
+                        </label>
+                        <input type="range" id="budget-slider" class="budget-slider" min="5000" max="100000" step="5000" value="15000">
+                        <div class="slider-ticks">
+                            <span>₹5k</span>
+                            <span>₹25k</span>
+                            <span>₹50k</span>
+                            <span>₹75k</span>
+                            <span>₹100k</span>
+                        </div>
+                    </div>
+
+                    <!-- Projections -->
+                    <div class="projections-container">
+                        <div class="projection-item">
+                            <span class="projection-label">Projected Monthly Leads</span>
+                            <span class="projection-value text-gradient" id="projected-leads">250 - 375</span>
+                        </div>
+                        <div class="projection-grid">
+                            <div class="projection-sub-item">
+                                <span class="projection-sub-label">Estimated CPC</span>
+                                <span class="projection-sub-value" id="projected-cpc">₹6.50</span>
+                            </div>
+                            <div class="projection-sub-item">
+                                <span class="projection-sub-label">Estimated CTR</span>
+                                <span class="projection-sub-value" id="projected-ctr">1.85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Contact Capture Form -->
+                <div class="contact-card">
+                    <h3 class="contact-title">Claim Your Free Ads Audit</h3>
+                    <p class="contact-subtitle">Get a customized lead generation strategy plan for your business based on the selected budget.</p>
+                    
+                    <form class="contact-form" id="lead-capture-form">
+                        <!-- Save Selected Budget Hidden State -->
+                        <input type="hidden" id="selected-budget" name="selected-budget" value="15000">
+                        
+                        <div class="form-group">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input type="text" id="full-name" class="form-input" placeholder="Durgadevi" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Work Email</label>
+                                <input type="email" id="email" class="form-input" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="+91 99000 00000" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="business-name" class="form-label">Business Name</label>
+                            <input type="text" id="business-name" class="form-input" placeholder="e.g. Tesco Structures" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="industry-select" class="form-label">Business Sector / Industry</label>
+                            <select id="industry-select" class="form-input" required>
+                                <option value="" disabled selected>Select your industry</option>
+                                <option value="construction">Roofing & Construction</option>
+                                <option value="beauty">Beauty & Salon / Bridal</option>
+                                <option value="design">Interior & Design</option>
+                                <option value="insurance">Insurance & Finance</option>
+                                <option value="it-services">Website & IT Services</option>
+                                <option value="fashion">Fashion & Handloom</option>
+                                <option value="other">Other Service-Based Business</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                            Get Strategy Consultation <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Success State (Hidden Initially) -->
+                    <div class="success-state hidden" id="form-success-state">
+                        <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                        <h4 class="success-title">Audit Request Received!</h4>
+                        <p class="success-description">Thank you, <strong id="user-name-placeholder">Client</strong>! Durgadevi P will review your business profile (<strong><span id="user-business-placeholder">Company</span></strong>) with your selected budget of <strong><span id="user-budget-placeholder">₹15,000</span>/mo</strong>. We will contact you at <span id="user-email-placeholder">email</span> within 24 hours.</p>
+                        <button class="btn btn-secondary btn-block" id="btn-reset-form">Edit Request Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/logo.jpg" alt="Durga Logo" class="footer-logo-img">
+                        <div class="logo-text">
+                            <span class="brand-name">DURGA</span>
+                            <span class="brand-sub">GROWTH MEDIA</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">Building predictable client acquisition engines for service-based businesses through data-driven Meta Ads and strategic content.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Direct Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#case-studies">Client Success Stories</a></li>
+                        <li><a href="#about">About Durgadevi</a></li>
+                        <li><a href="#why-choose-us">Why Choose Us</a></li>
+                        <li><a href="#estimator">ROI Lead Estimator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact-list">
+                        <li><i data-lucide="user"></i> Durgadevi P</li>
+                        <li><i data-lucide="briefcase"></i> Founder & Lead Generation Consultant</li>
+                        <li><i data-lucide="map-pin"></i> Chennai, Tamil Nadu, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Durga Digital Marketing (Durga Growth Media). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="app.js?v=1.1.2"></script>
+</body>
+</html>
