@@ -580,16 +580,22 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 50px;
+    align-items: stretch;
 }
 
 .service-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-lg);
-    padding: 40px 30px;
+    padding: 38px 30px;
     transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .service-card::before {
@@ -625,7 +631,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
     transition: var(--transition-smooth);
 }
 
@@ -650,12 +657,19 @@ img {
 .service-title {
     font-size: 1.35rem;
     margin-bottom: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.35;
+    min-height: 2.7em;
+    display: flex;
+    align-items: flex-start;
 }
 
 .service-description {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
+    margin-top: auto;
 }
 
 /* Success Stories / Interactive Dashboard */
