@@ -140,26 +140,36 @@ img {
 
 .btn-primary {
     background: var(--gold-gradient);
-    color: #000000;
+    color: #ffffff !important;
+    font-weight: 700;
     border: none;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
+.btn-primary i, .btn-primary svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
 .btn-primary:hover {
+    color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--white);
+    color: var(--text-primary);
     border: 1px solid var(--border-color);
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: var(--text-secondary);
+    background: var(--gold-gradient);
+    color: #ffffff !important;
+    border-color: transparent;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-block {
