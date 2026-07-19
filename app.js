@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         waves: {
-            name: "Waves Nature Sarees",
+            name: "Weaves & Co",
             industry: "Handloom Sarees",
             duration: "1 Month",
             leads: "350+",
