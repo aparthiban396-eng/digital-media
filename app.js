@@ -573,30 +573,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reveal services cards grid
-    gsap.from(".services-grid .service-card", {
+    // Reveal services cards grid container
+    gsap.from(".services-grid", {
         scrollTrigger: {
             trigger: ".services-grid",
-            start: "top 95%",
+            start: "top 90%",
             toggleActions: "play none none none"
         },
-        y: 40,
+        y: 30,
         opacity: 0,
-        stagger: 0.08,
         duration: 0.8,
         ease: "power2.out"
     });
 
-    // Reveal why-us cards grid
-    gsap.from(".why-grid .why-card", {
+    // Reveal why-us cards grid container
+    gsap.from(".why-grid", {
         scrollTrigger: {
             trigger: ".why-grid",
-            start: "top 95%",
+            start: "top 90%",
             toggleActions: "play none none none"
         },
-        y: 40,
+        y: 30,
         opacity: 0,
-        stagger: 0.1,
         duration: 0.8,
         ease: "power2.out"
     });
