@@ -506,14 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove preloader from DOM flow after animation
         tl.set("#preloader", { display: "none" });
 
-        // Reveal navbar
-        tl.from(".navbar", {
-            y: -80,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out"
-        }, "-=0.6");
-
         // Reveal hero texts
         tl.from(".hero-content > *", {
             y: 40,
