@@ -1181,6 +1181,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 50px;
+    align-items: stretch;
 }
 
 .award-card {
@@ -1188,10 +1190,12 @@ img {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .award-card:hover {
@@ -1243,17 +1247,21 @@ img {
 }
 
 .award-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 12px;
     line-height: 1.35;
+    height: 3.3rem;
+    display: flex;
+    align-items: center;
 }
 
 .award-description {
     font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.55;
+    margin-top: 0;
 }
 
 /* Why Choose Us */

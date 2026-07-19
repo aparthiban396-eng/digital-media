@@ -607,16 +607,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out"
     });
 
-    // Reveal awards cards grid
-    gsap.from(".awards-grid .award-card", {
+    // Reveal awards cards grid container
+    gsap.from(".awards-grid", {
         scrollTrigger: {
             trigger: ".awards-grid",
-            start: "top 95%",
+            start: "top 90%",
             toggleActions: "play none none none"
         },
-        y: 40,
+        y: 30,
         opacity: 0,
-        stagger: 0.1,
         duration: 0.8,
         ease: "power2.out"
     });
