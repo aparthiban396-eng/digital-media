@@ -1960,19 +1960,8 @@ img {
     }
     
     .hero-visual {
-        height: 350px;
+        display: none !important;
     }
-    
-    .logo-floating {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .orbit-1 { width: 240px; height: 240px; }
-    .orbit-2 { width: 290px; height: 290px; }
-    
-    .float-card-1 { top: 10%; right: 0; }
-    .float-card-2 { bottom: 5%; left: 0; }
 }
 
 /* Premium Preloader */
