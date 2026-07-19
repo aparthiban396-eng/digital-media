@@ -2173,64 +2173,65 @@ i:hover, svg:hover {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    width: 52px;
+    height: 52px;
     background: #25D366;
     color: #ffffff !important;
-    border-radius: 50px;
-    padding: 12px 22px 12px 16px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
     z-index: 99990;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-4px) scale(1.08);
     box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
     color: #ffffff !important;
 }
 
 .whatsapp-float-icon {
-    width: 32px;
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .whatsapp-float-icon i, .whatsapp-float-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 26px;
+    height: 26px;
     color: #ffffff !important;
     stroke: #ffffff !important;
 }
 
-.nav-whatsapp-btn {
+.nav-whatsapp-icon-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(37, 211, 102, 0.1);
-    color: #25D366;
-    border: 1px solid rgba(37, 211, 102, 0.3);
-    padding: 8px 16px;
-    border-radius: var(--border-radius-md);
-    font-size: 0.88rem;
-    font-weight: 700;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #25D366;
+    color: #ffffff !important;
+    border-radius: 50%;
     text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
     transition: var(--transition-smooth);
 }
 
-.nav-whatsapp-btn:hover {
-    background: #25D366;
+.nav-whatsapp-icon-btn:hover {
+    background: #20bd5a;
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
     color: #ffffff !important;
-    border-color: #25D366;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.nav-whatsapp-icon-btn i, .nav-whatsapp-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    color: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
 .btn-whatsapp-direct {
