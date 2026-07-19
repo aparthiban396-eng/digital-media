@@ -35,16 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Navbar & Header Section Scroll Effect
+    // 2. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
-    const headerSection = document.getElementById('header-section');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             if (navbar) navbar.classList.add('scrolled');
-            if (headerSection) headerSection.classList.add('scrolled');
         } else {
             if (navbar) navbar.classList.remove('scrolled');
-            if (headerSection) headerSection.classList.remove('scrolled');
         }
     });
 
