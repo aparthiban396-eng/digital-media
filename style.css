@@ -621,12 +621,14 @@ img {
 
 .service-card:hover .service-icon {
     background: var(--gold-primary);
-    color: #000000;
+    color: #ffffff;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
 .service-card:hover .service-icon i, .service-card:hover .service-icon svg {
     transform: scale(1.1);
+    color: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
 .service-icon i, .service-icon svg {
@@ -2112,5 +2114,33 @@ body.cursor-hover .custom-cursor-dot {
 /* Animate elements class placeholders */
 .gsap-reveal {
     opacity: 0;
+}
+
+/* Universal White Icon Color on Card & Component Hover */
+a:hover i, a:hover svg,
+button:hover i, button:hover svg,
+.btn:hover i, .btn:hover svg,
+.btn-primary:hover i, .btn-primary:hover svg,
+.btn-secondary:hover i, .btn-secondary:hover svg,
+.btn-nav-cta:hover i, .btn-nav-cta:hover svg,
+.service-card:hover .service-icon i, .service-card:hover .service-icon svg,
+.why-card:hover .why-icon i, .why-card:hover .why-icon svg,
+.award-card:hover .award-tag i, .award-card:hover .award-tag svg,
+.stat-card:hover i, .stat-card:hover svg,
+.mini-stats-card:hover .card-icon i, .mini-stats-card:hover .card-icon svg,
+.scroll-card:hover i, .scroll-card:hover svg,
+.metric-box:hover i, .metric-box:hover svg,
+.campaign-tag:hover i, .campaign-tag:hover svg,
+.badge:hover i, .badge:hover svg,
+.section-badge:hover i, .section-badge:hover svg,
+.social-links a:hover i, .social-links a:hover svg,
+.footer-contact-list li:hover i, .footer-contact-list li:hover svg,
+.service-icon:hover i, .service-icon:hover svg,
+.why-icon:hover i, .why-icon:hover svg,
+.card-icon:hover i, .card-icon:hover svg,
+i:hover, svg:hover {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    transition: color 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
 }
 
