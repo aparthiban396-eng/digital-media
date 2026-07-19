@@ -609,6 +609,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out"
     });
 
+    // Reveal awards cards grid
+    gsap.from(".awards-grid .award-card", {
+        scrollTrigger: {
+            trigger: ".awards-grid",
+            start: "top 95%",
+            toggleActions: "play none none none"
+        },
+        y: 40,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: "power2.out"
+    });
+
     // Reveal stats cards
     gsap.from(".stats-grid .stat-card", {
         scrollTrigger: {
@@ -719,7 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 10. 3D Tilt Micro-interactions for Cards
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        const tiltCards = document.querySelectorAll('.why-card, .service-card, .metric-box, .stat-card');
+        const tiltCards = document.querySelectorAll('.why-card, .service-card, .award-card, .metric-box, .stat-card');
         tiltCards.forEach(card => {
             card.style.transformStyle = 'preserve-3d';
             card.addEventListener('mousemove', (e) => {
