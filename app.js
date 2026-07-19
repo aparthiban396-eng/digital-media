@@ -442,11 +442,19 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const name = document.getElementById('full-name').value;
                 const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
                 const business = document.getElementById('business-name').value;
+                const budget = document.getElementById('user-budget-placeholder') ? document.getElementById('user-budget-placeholder').textContent : "15,000";
 
                 if (userNamePlaceholder) userNamePlaceholder.textContent = name;
                 if (userBusinessPlaceholder) userBusinessPlaceholder.textContent = business;
                 if (userEmailPlaceholder) userEmailPlaceholder.textContent = email;
+
+                const whatsappBtn = document.getElementById('user-whatsapp-direct-btn');
+                if (whatsappBtn) {
+                    const waMsg = encodeURIComponent(`Hi Durgadevi, I'm ${name} from ${business}. I just requested an Ads Audit for my business with a budget of ${budget}/mo. My phone: ${phone}, email: ${email}.`);
+                    whatsappBtn.href = `https://wa.me/919345267610?text=${waMsg}`;
+                }
 
                 leadForm.classList.add('hidden');
                 successState.classList.remove('hidden');
