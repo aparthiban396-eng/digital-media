@@ -444,24 +444,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 const email = document.getElementById('email').value;
                 const phone = document.getElementById('phone').value;
                 const business = document.getElementById('business-name').value;
+                const industrySelect = document.getElementById('industry-select');
+                const industry = industrySelect && industrySelect.selectedIndex >= 0 ? industrySelect.options[industrySelect.selectedIndex].text : '';
                 const budget = document.getElementById('user-budget-placeholder') ? document.getElementById('user-budget-placeholder').textContent : "15,000";
 
                 if (userNamePlaceholder) userNamePlaceholder.textContent = name;
                 if (userBusinessPlaceholder) userBusinessPlaceholder.textContent = business;
                 if (userEmailPlaceholder) userEmailPlaceholder.textContent = email;
 
+                const rawMsg = `Hi Durgadevi, I just submitted an Ads Audit Request!\n\n👤 Name: ${name}\n🏢 Business: ${business}\n📂 Industry: ${industry}\n💰 Monthly Budget: ₹${budget}\n📞 Phone: ${phone}\n✉️ Email: ${email}`;
+                const waUrl = `https://wa.me/919345267610?text=${encodeURIComponent(rawMsg)}`;
+
                 const whatsappBtn = document.getElementById('user-whatsapp-direct-btn');
                 if (whatsappBtn) {
-                    const waMsg = encodeURIComponent(`Hi Durgadevi, I'm ${name} from ${business}. I just requested an Ads Audit for my business with a budget of ${budget}/mo. My phone: ${phone}, email: ${email}.`);
-                    whatsappBtn.href = `https://wa.me/919345267610?text=${waMsg}`;
+                    whatsappBtn.href = waUrl;
                 }
+
+                // Automatically launch WhatsApp with pre-filled lead audit details
+                window.open(waUrl, '_blank');
 
                 leadForm.classList.add('hidden');
                 successState.classList.remove('hidden');
 
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnHtml;
-            }, 1500);
+            }, 1200);
         });
     }
 
