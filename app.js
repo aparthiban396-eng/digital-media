@@ -412,6 +412,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (hiddenBudgetInput) hiddenBudgetInput.value = budget;
         if (userBudgetPlaceholder) userBudgetPlaceholder.textContent = `₹${budget.toLocaleString('en-IN')}`;
+
+        // Micro-scale value pop animation identical on web and mobile
+        gsap.fromTo([projectedLeads, projectedCpc, projectedCtr, budgetDisplay], 
+            { scale: 1.05, color: '#d4af37' }, 
+            { scale: 1.0, color: 'inherit', duration: 0.25, ease: "power2.out" }
+        );
     };
 
     if (budgetSlider) {
@@ -772,4 +778,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Refresh ScrollTrigger after init to guarantee mobile scroll triggers match web version
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 500);
 });
