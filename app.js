@@ -633,51 +633,60 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out"
     });
 
-    // Reveal stats cards
-    gsap.from(".stats-grid .stat-card", {
-        scrollTrigger: {
-            trigger: ".stats-grid",
-            start: "top 95%",
-            toggleActions: "play none none none"
-        },
-        y: 30,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: "power2.out"
-    });
-
-    // Decoupled countUp animation for numbers to guarantee execution
+    // IntersectionObserver for Stat Counters (Guarantees count-up ONLY when scrolled into view)
     const statNumbers = document.querySelectorAll('.stat-number');
     
-    statNumbers.forEach((stat, idx) => {
-        const target = parseInt(stat.getAttribute('data-target'), 10);
-        const obj = { val: 0 };
-        gsap.to(obj, {
-            val: target,
-            duration: 2.0,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".stats-grid",
-                start: "top 95%", // Trigger slightly earlier for safety
-                toggleActions: "play none none none",
-                },
-            onUpdate: () => {
-                if (target >= 1000) {
-                    stat.innerText = Math.floor(obj.val).toLocaleString('en-IN');
-                } else {
-                    stat.innerText = Math.floor(obj.val);
-                }
-            },
-            onComplete: () => {
-                if (target >= 1000) {
-                    stat.innerText = target.toLocaleString('en-IN');
-                } else {
-                    stat.innerText = target;
-                }
+    // Set initial text to 0 so it never pre-counts before scroll
+    statNumbers.forEach(stat => {
+        stat.innerText = '0';
+    });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const container = entry.target;
+                const stats = container.querySelectorAll('.stat-number');
+                
+                stats.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-target'), 10);
+                    const obj = { val: 0 };
+                    gsap.to(obj, {
+                        val: target,
+                        duration: 2.2,
+                        ease: "power2.out",
+                        onUpdate: () => {
+                            if (target >= 1000) {
+                                stat.innerText = Math.floor(obj.val).toLocaleString('en-IN');
+                            } else {
+                                stat.innerText = Math.floor(obj.val);
+                            }
+                        },
+                        onComplete: () => {
+                            if (target >= 1000) {
+                                stat.innerText = target.toLocaleString('en-IN');
+                            } else {
+                                stat.innerText = target;
+                            }
+                        }
+                    });
+                });
+                
+                // Stop observing after animating once
+                observer.unobserve(container);
             }
         });
-    });
+    }, observerOptions);
+
+    const statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid) {
+        statsObserver.observe(statsGrid);
+    }
 
     // Reveal about section image and elements
     gsap.from(".about-photo-wrapper", {
